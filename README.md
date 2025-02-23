@@ -37,8 +37,8 @@ Ensure you have the following installed:
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/sales-revenue-analytics-api.git
-cd sales-revenue-analytics-api
+git clone https://github.com/vikassharma809070/sales.git
+cd sales
 Install dependencies:
 
 bash
