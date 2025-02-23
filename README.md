@@ -39,3 +39,73 @@ Clone the repository:
 ```bash
 git clone https://github.com/yourusername/sales-revenue-analytics-api.git
 cd sales-revenue-analytics-api
+Install dependencies:
+
+bash
+npm install
+Set up the environment variables:
+
+Create a .env file and configure the required variables:
+
+plaintext
+MONGO_URI=mongodb://localhost:27017/sales_db
+PORT=4000
+Import sample data:
+
+bash
+node seed.js
+Start the development server:
+
+bash
+npm start
+Running with Docker
+Build and run the Docker container:
+
+bash
+docker-compose up --build
+Access the API at http://localhost:4000/graphql
+
+GraphQL Queries
+1. Get Customer Spending
+graphql
+query {
+  getCustomerSpending(customerId: "63f8b3d5a7b1d7f3b0a2c5e1") {
+    customerId
+    totalSpent
+    averageOrderValue
+    lastOrderDate
+  }
+}
+2. Get Top Selling Products
+graphql
+query {
+  getTopSellingProducts(limit: 5) {
+    productId
+    name
+    totalSold
+  }
+}
+3. Get Sales Analytics
+graphql
+query {
+  getSalesAnalytics(startDate: "2024-01-01", endDate: "2024-06-30") {
+    totalRevenue
+    completedOrders
+    categoryBreakdown {
+      category
+      revenue
+    }
+  }
+}
+Future Improvements
+Add a mutation for placing an order.
+
+Implement pagination for getCustomerOrders.
+
+Enhance query performance with Redis caching.
+
+License
+This project is licensed under the MIT License.
+
+
+Feel free to copy and paste this into your `README.md` file. If you have any further quries.
