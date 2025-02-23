@@ -1,11 +1,12 @@
-console.log("Helloworld, How are you vikas Sharma ");
+// console.log("Helloworld, ");
 
 
-const punycode = require('punycode');
+
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const connectDB = require('./src/config/db');
 const typeDefs = require('./src/graphql/typeDefs');
+const punycode = require('punycode');
 const resolvers = require('./src/graphql/resolvers');
 
 connectDB();
